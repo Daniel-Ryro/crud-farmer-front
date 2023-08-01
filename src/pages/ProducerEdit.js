@@ -16,15 +16,6 @@ const ProducerEdit = ({ match }) => {
     planted_crops: '',
   });
 
-  // useEffect(() => {
-  //   const fetchProducer = async () => {
-  //     const id = match.params.id;
-  //     const data = await getProducerRuralById(id);
-  //     setFormData(data);
-  //   };
-
-  //   fetchProducer();
-  // }, [match.params.id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

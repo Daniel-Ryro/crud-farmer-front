@@ -27,12 +27,11 @@ function App() {
 
         </header>
         <main>
-          {/* Use o Switch para garantir que apenas a rota correspondente seja renderizada */}
           <Switch>
             <Route exact path="/producerForm" component={ProducerForm} />
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/edit/:id" component={ProducerEdit} />
-            <Route path="/"> {/* Defina uma rota com um caminho genérico para renderizar o ProducerList */}
+            <Route path="/"> 
               <Button onClick={handleShowForm} variant="contained" color="primary">
                 <Link to="/producerForm" style={{ textDecoration: 'none', color: 'white' }}>
                   Novo Produtor
@@ -43,7 +42,7 @@ function App() {
                   Dashboard
                 </Button>
               </Link>
-              {showForm || showDashboard ? null : <ProducerList />} {/* Renderize o ProducerList somente quando showForm e showDashboard forem false */}
+              {showForm || showDashboard ? null : <ProducerList />} 
             </Route>
           </Switch>
 
